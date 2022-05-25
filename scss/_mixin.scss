@@ -1,0 +1,77 @@
+@mixin mobile-top {
+    max-width:90%;
+    margin:20px auto 0;
+}
+
+@mixin desktop-top {
+    max-width: 85%;
+    margin:0 auto ;
+}
+
+@mixin content-width{
+    max-width: 80%;
+    margin:0 auto;
+}
+
+@mixin button{
+    background-color: var(--eerie-black);
+    color:var(--white);
+    display:block;
+    width:148px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    transition: 1s;
+    border-radius: 8px;
+
+    &:hover,
+    &:focus{
+        background-color:var(--white);
+        border:1px solid var(--eerie-black);
+        color: var(--eerie-black);
+    }
+
+    @media screen and (min-width:768px){
+        width: 178px;
+            height: 59px;
+            line-height: 59px;
+    }
+}
+
+@mixin button-category {
+    background-color: var(--white);
+    color: var(--eerie-black);
+    display: block;
+    width: 171px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    transition: 1s;
+    border-radius: 8px;
+
+    &:hover,
+    &:focus {
+        background-color: var(--eerie-black);
+        color: var(--white);
+    }
+}
+
+@mixin button-product {
+    background-color: var(--white);
+    color: var(--eerie-black);
+    border:1px solid var(--eerie-black);
+    display: block;
+    width: 171px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    transition: 1s;
+    border-radius: 8px;
+
+    &:hover,
+    &:focus {
+        border:none;
+        background-color: var(--eerie-black);
+        color: var(--white);
+    }
+}
