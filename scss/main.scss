@@ -5,7 +5,7 @@
 
 #bg-black {
     transition: 1s;
-    z-index: 10;
+    z-index: 19;
 
     &.active {
         position: fixed;
@@ -25,6 +25,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            &.sticky {
+                position: fixed;
+                top: 0;
+                left: 0;
+                max-width: 100%;
+                width: 100%;
+                margin: 0 auto;
+                z-index: 990;
+                padding: 20px;
+                background-color: var(--white);
+            }
 
             &-toggle {
                 display: flex;
@@ -72,7 +84,7 @@
             height: 100%;
             padding: 31px 22px 0;
             transition: 1s;
-            z-index: 999;
+            z-index: 19;
 
 
             &.active {
@@ -171,6 +183,7 @@
     }
 
     &__desktop {
+
         &--top {
             @include desktop-top;
             display: flex;
@@ -190,6 +203,12 @@
                 align-items: center;
                 border-radius: 8px;
                 width: 270px;
+                transition:0.5s;
+
+                &:hover,
+                &:focus-visible{
+                    border: 1px solid var(--black);
+                }
             }
 
             &-input {
@@ -273,6 +292,15 @@
             justify-content: center;
             width: 100%;
             padding: 21px 0;
+
+            &.sticky {
+                position: fixed;
+                top: 0;
+                left: 0;
+                max-width: 100%;
+                background-color: var(--white);
+                z-index: 999;
+            }
 
             &-menu {
                 display: flex;
@@ -450,6 +478,7 @@
 }
 
 .sectionThree {
+    
     @include content-width;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -612,13 +641,13 @@
         }
 
         &--link {
-            color: var(--black);
+            color: var(--sonic-silver);
             transition: 1s;
 
             &:hover,
             &:focus,
             &.active {
-                color: var(--ocean-green);
+                color: var(--black);
             }
         }
     }
